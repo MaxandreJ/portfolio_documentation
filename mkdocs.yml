@@ -1,3 +1,22 @@
 site_name: MkLorum
 theme:
   name: material
+  palette:
+    scheme: slate
+nav:
+- 'Home': 'index.md'
+- 'Tutorials':
+  - 'Callback': 'tutorials/callback.md'
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+
