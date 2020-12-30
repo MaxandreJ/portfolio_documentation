@@ -7,7 +7,7 @@ My name is Maxandre Jacqueline and I am currently looking for my first position 
 
 
 
-[picture_of_me]: ../resources/images/picture_of_me.jpg
+[picture_of_me]: ./resources/images/picture_of_me.jpg
 
 [Clippings_portfolio]: https://www.clippings.me/maxandre
 [LinkedIn_profile]: https://www.linkedin.com/in/maxandre-jacqueline-8b730648/
