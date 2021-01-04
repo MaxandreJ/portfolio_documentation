@@ -14,7 +14,7 @@
     
     
       
-        <title>Callbacks - Maxandre Jacqueline's portfolio</title>
+        <title>Selectors - Maxandre Jacqueline's portfolio</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-callbacks" class="md-skip">
+        <a href="#introduction-to-selectors" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Callbacks
+              Selectors
             
           </span>
         </div>
@@ -195,6 +195,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../callback/" class="md-nav__link">
+      Callbacks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -205,58 +217,10 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Callbacks
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
     <a href="./" class="md-nav__link md-nav__link--active">
-      Callbacks
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#callbacks-as-part-of-your-programming-style" class="md-nav__link">
-    Callbacks as part of your programming style
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#callbacks-to-write-asynchronous-code" class="md-nav__link">
-    Callbacks to write asynchronous code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../selector/" class="md-nav__link">
       Selectors
     </a>
+    
   </li>
 
         
@@ -282,28 +246,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#callbacks-as-part-of-your-programming-style" class="md-nav__link">
-    Callbacks as part of your programming style
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#callbacks-to-write-asynchronous-code" class="md-nav__link">
-    Callbacks to write asynchronous code
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -315,55 +257,19 @@
               
                 
                 
-                <h1 id="introduction-to-callbacks">Introduction to callbacks</h1>
-<p>This document introduces the notion of a <em>callback</em>, with a focus on its implementation in JavaScript. The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks.</p>
-<p>I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript. JavaScript beginners can use this document to discover how to write callbacks in JavaScript. JavaScript beginners will however not find here a comprehensive introduction to JavaScript (for one, please refer to <a href="https://www.w3schools.com/js/DEFAULT.asp">w3schools</a>, for example).</p>
-<p>Three concepts are essential to understand callbacks:</p>
+                <h1 id="introduction-to-selectors">Introduction to selectors</h1>
+<p><strong>Document in construction</strong></p>
+<p>This document introduces the notion of a selector, with a focus on its implementation in the language of Cascading Style Sheets (CSS). Selectors are found in every CSS document. Therefore, every student of CSS should learn about them.</p>
+<p>I wrote this document for people who are already familiar with the Hypertext Markup Language (HTML), but are only beginning to learn CSS. CSS beginners will find how to use selectors in this document. For a more comprehensive introduction to CSS, please refer to <a href="https://www.w3schools.com/css/default.asp">w3schools</a>, for example.</p>
+<p>A selector is a sequence of characters that define a search pattern. The selector can be used to select elements of a document that match the search pattern. Selectors of various level of complexity exist. This document only covers some simple selectors:</p>
 <ul>
-<li>A <em>function</em> is a section of code that can be called.</li>
-<li>An <em>argument</em> can be passed to a function as input.</li>
-<li><em>Asynchronous</em> code is code that is executed with a delay after being called.</li>
+<li>the universal selector,</li>
+<li>type selectors,</li>
+<li>attribute selectors,</li>
+<li>class selectors,</li>
+<li>ID selectors.</li>
 </ul>
-<p>A callback is a function that is passed as an argument to another function. You may want to use callbacks:</p>
-<ul>
-<li>as part of your programming style, or</li>
-<li>to write asynchronous code.</li>
-</ul>
-<p>Next, you will learn about these uses in more detail.</p>
-<h2 id="callbacks-as-part-of-your-programming-style">Callbacks as part of your programming style</h2>
-<p>You can use callbacks to make your code appear more <em>functional</em>. <em>Functional programming</em> is a style of programming where your code relies on functions. Functional programming is often contrasted with <em>imperative programming</em>, where code relies on instructions.</p>
-<p>Imagine that you would like to write some JavaScript code that creates an array of numbers and multiplies each number by two to update the array. First, you  would declare and initialise a <code class="highlight"><span class="nx">my_array</span></code> variable like so:
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">my_array</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="mf">8</span><span class="p">,</span> <span class="mf">16</span><span class="p">];</span>
-</code></pre></div>
-Then, you could decide to write the rest of the code in an imperative style. It would look like this:
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">my_array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">index</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="nx">my_array</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">=</span> <span class="nx">my_array</span><span class="p">[</span><span class="nx">index</span><span class="p">]</span> <span class="o">*</span> <span class="mf">2</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Notice that the array is updated by iterating through its elements with a <code class="highlight"><span class="k">for</span></code> loop. Within the loop, each element of the array is reassigned to a new value equal to twice of its previous value.</p>
-<p>Now envisage that you would like to rewrite the previous code in a more functional style. The rewritten code would look like this:
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">multiply_by_two</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="mf">2</span><span class="p">);</span>
-
-<span class="kd">var</span> <span class="nx">my_array</span> <span class="o">=</span> <span class="nx">my_array</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiply_by_two</span><span class="p">);</span>
-</code></pre></div>
-Note that this code uses the callback <code class="highlight"><span class="nx">multiply_by_two</span></code> that is passed as an argument to the function <code class="highlight"><span class="nx">map</span></code>. Here, the callback is defined using <a href="https://www.w3schools.com/js/js_arrow_function.asp">arrow notation</a>.</p>
-<details class="note"><summary>Note on the merits of the imperative and functional styles</summary><p>The imperative and functional styles both have their respective merits. The imperative style is more straightforward to understand, while the functional style can allow for more conciseness.</p>
-</details>
-<h2 id="callbacks-to-write-asynchronous-code">Callbacks to write asynchronous code</h2>
-<p>You can also use callbacks to write asynchronous code. Suppose that you would like to execute a function after a delay of three seconds. This is how you would program this in JavaScript:
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">SayHello</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello!&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">SayHello</span><span class="p">,</span> <span class="mf">3000</span><span class="p">);</span>
-</code></pre></div>
-First, you defined the function <code class="highlight"><span class="nx">SayHello</span></code> by using <a href="https://www.w3schools.com/js/js_functions.asp">standard syntax</a>. This function displays the string <code class="highlight"><span class="s1">&#39;Hello!&#39;</span></code> in the console. Then, you called the function <code class="highlight"><span class="nx">setTimeout</span></code>. This function executes a callback after a set amount of time. The function takes in two arguments:</p>
-<ol>
-<li><code class="highlight"><span class="nx">SayHello</span></code> as a callback, and</li>
-<li><code>3000</code> as the set amount of time before the callback is executed. Note that this amount of time is expressed in milliseconds.</li>
-</ol>
-<p>As 3000 milliseconds is equal to three seconds, <code class="highlight"><span class="nx">setTimeout</span></code> executes <code class="highlight"><span class="nx">SayHello</span></code> after three seconds. You have written asynchronous code, congratulations!</p>
+<p><em>To be continued.</em></p>
                 
               
               
@@ -382,7 +288,7 @@ First, you defined the function <code class="highlight"><span class="nx">SayHell
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../callback/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -391,25 +297,11 @@ First, you defined the function <code class="highlight"><span class="nx">SayHell
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Callbacks
               </div>
             </div>
           </a>
         
-        
-          <a href="../selector/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Selectors
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
