@@ -2,7 +2,7 @@
 
 This document introduces the notion of a *callback*, with a focus on its implementation in JavaScript. The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks.
 
-I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript. JavaScript beginners can use this document to discover how to write callbacks in JavaScript. JavaScript beginners will however not find here a comprehensive introduction to JavaScript (for one, please refer to [w3schools][JavaScript_tutorial], for example).
+I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript. JavaScript beginners can read the following to discover how to use callbacks in JavaScript. JavaScript beginners will however not find here a comprehensive introduction to JavaScript (for one, please refer to [w3schools][JavaScript_tutorial], for example).
 
 Three concepts are essential to understand callbacks:
 
