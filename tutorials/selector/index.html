@@ -196,12 +196,59 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" >
+    <label class="md-nav__link" for="nav-2-1">
+      JavaScript
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="JavaScript" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        JavaScript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../callback/" class="md-nav__link">
       Callbacks
     </a>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
+    <label class="md-nav__link" for="nav-2-2">
+      CSS
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CSS" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        CSS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -217,10 +264,44 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Selectors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Selectors
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-universal-selector" class="md-nav__link">
+    The universal selector
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -246,6 +327,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-universal-selector" class="md-nav__link">
+    The universal selector
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -259,8 +355,8 @@
                 
                 <h1 id="introduction-to-selectors">Introduction to selectors</h1>
 <p><strong>Document in construction</strong></p>
-<p>This document introduces the notion of a selector, with a focus on its implementation in the language of Cascading Style Sheets (CSS). Selectors are found in every CSS document. Therefore, every student of CSS should learn about them.</p>
-<p>I wrote this document for people who are already familiar with the Hypertext Markup Language (HTML), but are only beginning to learn CSS. CSS beginners will find how to use selectors in this document. CSS beginners will however not find here a comprehensive introduction to CSS (for one, please refer to <a href="https://www.w3schools.com/css/default.asp">w3schools</a>, for example).</p>
+<p>This document introduces the notion of a <em>selector</em>, with a focus on its implementation in the language of Cascading Style Sheets (CSS). This document does not provide a comprehensive introduction to CSS (for one, please refer to <a href="https://www.w3schools.com/css/default.asp">w3schools</a>, for example).</p>
+<p>Selectors are found in every CSS document. Therefore, every student of CSS should learn about them. I wrote this document for people who are already familiar with the Hypertext Markup Language (HTML), but are only beginning to learn CSS.</p>
 <p>A selector is a sequence of characters that define a search pattern. The selector can be used to select elements of a document that match the search pattern. Selectors of various level of complexity exist in CSS. This document only covers some simple CSS selectors:</p>
 <ul>
 <li>the universal selector,</li>
@@ -269,6 +365,33 @@
 <li>class selectors,</li>
 <li>ID selectors.</li>
 </ul>
+<p>I will introduce the previous selectors by considering how they may be used to improve the layout of a sample HTML page. Suppose that someone called Suzie has written a page of her personal diary using HTML. In the <code class="highlight">body</code> of the page, she wrote:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Suzie&#39;s personal diary<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Tuesday, 12th January 2021<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;entry introductory&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;A mean boy.&quot;</span><span class="p">&gt;</span>Tim<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> was mean to me today.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;entry body&quot;</span><span class="p">&gt;</span>
+    Today at school, I asked Tim to lend me his eraser because I had forgotten mine at home. He replied that I am the one who should be erased and started laughing. Tim is so mean and <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;angry&quot;</span><span class="p">&gt;</span>I hate him<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>!
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Now, her diary looks like this:</p>
+<p><img alt="A sample html page with default layout." src="../../resources/images/tutorials/selectors/default.png" /></p>
+<p>Suzie is disappointed with the bland look of her page. She decides to use CSS to design the page. She creates a blank CSS file called <code>style.css</code> in the directory of the HTML page, and inserts the following code in the <code class="highlight">head</code> of the page:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel </span><span class="o">=</span> <span class="s">&quot;stylesheet&quot;</span>
+  <span class="na">type </span><span class="o">=</span> <span class="s">&quot;text/css&quot;</span>
+  <span class="na">href </span><span class="o">=</span> <span class="s">&quot;style.css&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div></p>
+<p>This code enables the use of the CSS file <code>style.css</code> to style the HTML page. Next, we will review how she can add the simple CSS selectors to <code>style.css</code> to design the page.</p>
+<h2 id="the-universal-selector">The universal selector</h2>
+<p>The universal selector <code class="highlight"><span class="o">*</span></code> selects all elements. Like all selectors, the universal selector is found before a code block that defines a style.</p>
+<p>Suzie would like all of her text to appear handwritten. She uses the universal selector to select all the text that she wrote. She inserts the following code into <code>style.css</code>:
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="o">*</span> <span class="p">{</span>
+</span>    <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Bradley Hand&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+This code redesigns Suzie's page into:
+<img alt="A sample html page with default layout." src="../../resources/images/tutorials/selectors/universal_selector.png" /></p>
 <p><em>To be continued.</em></p>
                 
               
