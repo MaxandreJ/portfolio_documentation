@@ -26,7 +26,7 @@ I will introduce the previous selectors by considering how they may be used to i
 </p>
 ```
 
-This code makes her diary look like this:
+Now, her diary look like this:
 
 ![A sample html page with default layout.][default]
 
