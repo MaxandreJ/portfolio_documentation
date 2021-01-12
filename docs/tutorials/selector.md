@@ -52,6 +52,7 @@ Suzie would like all of her text to appear handwritten. She uses the universal s
 }
 ```
 This code redesigns Suzie's page into:
+
 ![A sample html page with default layout.][universal_selector]
 
 [universal_selector]: ../resources/images/tutorials/selectors/universal_selector.png
