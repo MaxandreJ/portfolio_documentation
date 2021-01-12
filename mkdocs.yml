@@ -6,8 +6,10 @@ theme:
 nav:
 - 'Home': 'index.md'
 - 'Tutorials':
-  - 'Callbacks': 'tutorials/callback.md'
-  - 'Selectors': 'tutorials/selector.md'
+    - 'JavaScript':
+        - 'Callbacks': 'tutorials/callback.md'
+    - 'CSS':
+        - 'Selectors': 'tutorials/selector.md'
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
