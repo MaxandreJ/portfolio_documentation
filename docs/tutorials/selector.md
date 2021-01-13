@@ -14,7 +14,7 @@ A selector is a sequence of characters that define a search pattern. The selecto
 * class selectors,
 * ID selectors.
 
-I will introduce the previous selectors by considering how they may be used to improve the layout of a sample HTML page. Suppose that someone called Suzie has written a page of her personal diary using HTML. In the `#!HTML body` of the page, she wrote:
+I will introduce the previous selectors by considering how they may be used to improve the layout of a sample HTML page. Suppose that a child called Suzie wrote a page of her personal diary using HTML. In the `#!HTML body` of the page, she wrote:
 ``` HTML
 <h1>Suzie's personal diary</h1>
 <h2>Tuesday, 12th January 2021</h2>
@@ -27,16 +27,14 @@ I will introduce the previous selectors by considering how they may be used to i
 ```
 
 Now, her diary look like this:
+![Suzie's diary with a default layout.][default]{: class="screenshots"}
 
-![A sample html page with default layout.][default]
-
-Suzie is disappointed with the bland look of her page. She decides to use CSS to design the page. She creates a blank CSS file called `style.css` in the directory of the HTML page, and inserts the following code in the `#!HTML head` of the page:
+Suzie is disappointed with the bland look of the page. She decides to use CSS to design the page. She creates a blank CSS file called `style.css` in the directory of the HTML page, and inserts the following code in the `#!HTML head` of the page:
 ```HTML
 <link rel = "stylesheet"
   type = "text/css"
   href = "style.css" />
 ```
-
 This code enables the use of the CSS file `style.css` to style the HTML page. Next, we will review how she can add the simple CSS selectors to `style.css` to design the page.
 
 [default]: ../resources/images/tutorials/selectors/default.png
@@ -52,11 +50,30 @@ Suzie would like all of her text to appear handwritten. She uses the universal s
 }
 ```
 This code redesigns Suzie's page into:
+![Suzie's diary after having used the universal selector.][universal_selector]{: class="screenshots"}
 
-![A sample html page with default layout.][universal_selector]
+Suzie likes the improvements, but thinks that she would have still done a much better job if she had designed her diary on paper. Next, we consider how using type selectors can help improve the look of her diary further.
 
 [universal_selector]: ../resources/images/tutorials/selectors/universal_selector.png
 
+## Type selectors
+
+Type selectors select all HTML elements of a given type. The type selector is the type to be selected. Common types include `#!HTML p`, `#!HTML h1`, `#!HTML h2`, `#!HTML div` and `#!HTML span`.
+
+Suzie would like the top heading to be in small caps and the date to be underlined. She adds the following code into the CSS file:
+```CSS hl_lines="1 5"
+h1 {
+    font-variant: small-caps;
+}
+
+h2 {
+    text-decoration: underline;
+}
+```
+Suzie's personal diary now appears as:
+![Suzie's diary after having used the universal and type selectors.][type_selectors]{: class="screenshots"}
+
+[type_selectors]: ../resources/images/tutorials/selectors/type_selectors.png
 
 
 

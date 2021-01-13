@@ -1,3 +1,8 @@
 code {
-  white-space : pre-wrap !important;
+  white-space: pre-wrap !important;
 }
+
+img.screenshots {
+    margin-top: 18px;
+}
+
