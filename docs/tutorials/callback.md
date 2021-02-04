@@ -2,7 +2,7 @@
 
 This document introduces the notion of a *callback*, with a focus on its implementation in JavaScript. This document does not provide a comprehensive introduction to JavaScript (for one, please refer to [w3schools][JavaScript_tutorial], for example).
 
-The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks. I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript. 
+The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks. I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript.
 
 Three concepts are essential to understand callbacks:
 
@@ -42,7 +42,7 @@ const multiply_by_two = (x => x * 2);
 
 var my_array = my_array.map(multiply_by_two);
 ```
-Note that this code uses the callback `#!JS multiply_by_two` that is passed as an argument to the function `#!JS map`. Here, the callback is defined using [arrow notation][arrow_notation].
+Note that this code uses the callback `#!JS multiply_by_two`, which is passed as an argument to the function `#!JS map`. Here, the callback is defined using [arrow notation][arrow_notation].
 
 ??? note "Note on the merits of the imperative and functional styles"
     The imperative and functional styles both have their respective merits. The imperative style is more straightforward to understand, while the functional style can allow for more conciseness.
