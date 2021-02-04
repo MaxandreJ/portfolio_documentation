@@ -369,7 +369,7 @@
                 
                 <h1 id="introduction-to-callbacks">Introduction to callbacks</h1>
 <p>This document introduces the notion of a <em>callback</em>, with a focus on its implementation in JavaScript. This document does not provide a comprehensive introduction to JavaScript (for one, please refer to <a href="https://www.w3schools.com/js/DEFAULT.asp">w3schools</a>, for example).</p>
-<p>The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks. I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript. </p>
+<p>The notion of a callback is particularly important to understand for programming in JavaScript. JavaScript is often used to write web applications, which commonly contain numerous callbacks. I wrote this document for people who are already familiar with one programming language, but are only beginning to learn Javascript.</p>
 <p>Three concepts are essential to understand callbacks:</p>
 <ul>
 <li>A <em>function</em> is a section of code that can be called.</li>
@@ -399,7 +399,7 @@ Notice that the array is updated by iterating through its elements with a <code 
 
 <span class="kd">var</span> <span class="nx">my_array</span> <span class="o">=</span> <span class="nx">my_array</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiply_by_two</span><span class="p">);</span>
 </code></pre></div>
-Note that this code uses the callback <code class="highlight"><span class="nx">multiply_by_two</span></code> that is passed as an argument to the function <code class="highlight"><span class="nx">map</span></code>. Here, the callback is defined using <a href="https://www.w3schools.com/js/js_arrow_function.asp">arrow notation</a>.</p>
+Note that this code uses the callback <code class="highlight"><span class="nx">multiply_by_two</span></code>, which is passed as an argument to the function <code class="highlight"><span class="nx">map</span></code>. Here, the callback is defined using <a href="https://www.w3schools.com/js/js_arrow_function.asp">arrow notation</a>.</p>
 <details class="note"><summary>Note on the merits of the imperative and functional styles</summary><p>The imperative and functional styles both have their respective merits. The imperative style is more straightforward to understand, while the functional style can allow for more conciseness.</p>
 </details>
 <h2 id="callbacks-to-write-asynchronous-code">Callbacks to write asynchronous code</h2>
