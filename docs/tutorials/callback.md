@@ -45,7 +45,7 @@ var my_array = my_array.map(multiply_by_two);
 Note that this code uses the callback `#!JS multiply_by_two`, which is passed as an argument to the function `#!JS map`. Here, the callback is defined using [arrow notation][arrow_notation].
 
 ??? note "Note on the merits of the imperative and functional styles"
-    The imperative and functional styles both have their respective merits. The imperative style is more straightforward to understand, while the functional style can allow for more conciseness.
+    The imperative and functional styles both have their respective merits. The imperative style is more straightforward to understand, while the functional style facilitates conciseness.
 
 [arrow_notation]: https://www.w3schools.com/js/js_arrow_function.asp
 
