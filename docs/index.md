@@ -13,6 +13,6 @@ My name is Maxandre Jacqueline and I am currently working as an API technical wr
 [LinkedIn_profile]: https://www.linkedin.com/in/maxandre-jacqueline-8b730648/
 [GitHub_repository]: https://github.com/MaxandreJ
 [AFS_website]: https://www.afsi.com/
-[Exceedra]: https://exceedra.com/
-[Telus Agriculture]: https://www.telus.com/en/bc/agriculture
+[Exceedra_website]: https://exceedra.com/
+[Telus_Agriculture_website]: https://www.telus.com/en/bc/agriculture
 
