@@ -2,7 +2,7 @@
 
 ![A picture of me.][picture_of_me]{: width=150, style="float:left; margin-right: 16px;"}
 
-My name is Maxandre Jacqueline and I am currently working as an API technical writer, Product for [AFS][AFS_website] / [Exceedra][Exceedra_website] (part of [Telus Agriculture][Telus_Agriculture_website]). You can find samples of my work on this website. For now, I have only finished one tutorial here, but I am planning to write more. My entire portfolio, including PDF documents, can be found on [my Clippings website][Clippings_portfolio]. For more information on me, please consult [my LinkedIn profile][LinkedIn_profile]. Finally, you can find some programs that I developed on [my GitHub repository][GitHub_repository].
+My name is Maxandre Jacqueline and I am currently working as an API Technical Writer, Product for [AFS][AFS_website] / [Exceedra][Exceedra_website] (part of [Telus Agriculture][Telus_Agriculture_website]). You can find samples of my work on this website. For now, I have only finished one tutorial here, but I am planning to write more. My entire portfolio, including PDF documents, can be found on [my Clippings website][Clippings_portfolio]. For more information on me, please consult [my LinkedIn profile][LinkedIn_profile]. Finally, you can find some programs that I developed on [my GitHub repository][GitHub_repository].
 
 
 
